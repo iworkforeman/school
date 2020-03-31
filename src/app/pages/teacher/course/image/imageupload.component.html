@@ -1,0 +1,17 @@
+<div class="image-uploader-wrapper">
+    <div class="row">
+        <div class="col-md-2 col-xl-2 col-lg-2 image-item" *ngFor="let url of urls; index as i;">
+            <img [src]="url" alt="">    
+            <span class="remove-icon" (click)="removeImage(i)">×</span>
+        </div>
+        <div class="col-md-2 col-xl-2 col-lg-2">
+            <div class="upload-btn-wrapper">
+                <div class="add-photo">
+                    <h2>+</h2>
+                    <span>Photo</span>
+                </div>
+                <input type="file" (change)="onSelectFile($event)" name="fileUpload" multiple="multiple" accept="image/*" />
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,305 @@
+<div class="content__inner">
+    <header class="content__title">
+        <h1>{{ pageTitle }}</h1>
+      </header>
+    <div class="row">
+        <div class="col-lg-8 col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group">
+                        <h4 class="course-title">The Water Cycle
+                            <span class="edit-icon">
+                                <i class="zmdi zmdi-edit zmdi-hc-fw"></i>
+                            </span>
+                        </h4>
+                        <!-- <input type="text" class="form-control" mask="00/00/0000" placeholder="eg: Learning about the Compass">
+                        <i class="form-group__bar"></i> -->
+                    </div>
+                    <div class="form-group">
+                        <p class="course-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Ipsam possimus quae nulla id vero repellat exercitationem modi ullam ex. 
+                            Quis aut saepe optio alias dolorum doloremque culpa voluptate quae consectetur.
+                            <span class="edit-icon">
+                                <i class="zmdi zmdi-edit zmdi-hc-fw"></i>
+                            </span>
+                        </p>
+                        <!-- <input type="text" class="form-control" mask="00/00/0000" placeholder="eg: Type the instructions of your class here">
+                        <i class="form-group__bar"></i> -->
+                    </div>
+                    <div class="form-group">
+                        <div class="btn-group dropdown" dropdown>
+                            <button dropdownToggle type="button" class="btn btn-danger">Add Media</button>
+                            <div class="dropdown-menu" *dropdownMenu>
+                              <!-- <button class="dropdown-item" (click)="quizModal.show()">Image</button> -->
+                              <button class="dropdown-item" (click)="youtubeModal.show()" href="#">YouTube Link</button>
+                              <button class="dropdown-item" (click)="quizModal.show()">Quizz</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <app-youtube-card title = 'Youtube Video Title Goes Here' description = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga dolorem sunt perferendis incidunt quas vero eius, 
+                    alias sint explicabo. Sunt nesciunt laudantium velit eum voluptatibus dolore placeat. Beatae, consequatur tempore?'></app-youtube-card>
+                    </div>
+                    <div class="form-group">
+                        <app-image-uploader></app-image-uploader>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Topic</label>
+                        <div class="select">
+                            <select class="form-control">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                                <option>Option 5</option>
+                            </select>
+                            <i class="form-group__bar"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="button" class="btn btn-success btn-block">Save for later</button>
+                        <small class="form-text text-muted">
+                            Updated: 15mins ago
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <p></p>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" placeholder="Start Date" class="form-control" bsDatepicker [bsConfig]="bsConfig" [(ngModel)]="bsValue">
+                        <i class="form-group__bar"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" placeholder="Submission Deadline" class="form-control" bsDatepicker [bsConfig]="bsConfig" [(ngModel)]="bsValue2">
+                        <i class="form-group__bar"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <a class="preview-course">Preview Course</a>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="button" class="btn btn-info btn-block">Publish</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" bsModal #youtubeModal="bs-modal" tabindex="-1" role="dialog" aria-labelledby="dialog-static-name">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Youtube Link</h4>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Title">
+                  <i class="form-group__bar"></i>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Youtube link">
+                  <i class="form-group__bar"></i>
+                </div>
+                <div class="form-group">
+                  <textarea type="text" class="form-control" rows="5" placeholder="180 characters of the Youtube description goes here" ></textarea>
+                  <i class="form-group__bar"></i>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-link">Submit</button>
+          <button type="button" class="btn btn-link" (click)="youtubeModal.hide()">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div class="modal fade" bsModal #quizModal="bs-modal" tabindex="-1" role="dialog" aria-labelledby="dialog-static-name">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Quiz</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-6 col-lg-6">
+                    <form>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-5 col-lg-5">
+                                    <div class="select">
+                                        <select class="form-control">
+                                            <option>Science</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                            <option>Option 4</option>
+                                            <option>Option 5</option>
+                                        </select>
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 col-lg-1"></div>
+                                <div class="col-md-3 col-lg-3">
+                                    <button class="btn btn-light">Save Draft</button>
+                                </div>
+                                <div class="col-md-3 col-lg-3">
+                                    <button class="btn btn-primary">Publish</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Question</label>
+                            <input type="text" class="form-control" placeholder="Type your question here">
+                            <i class="form-group__bar"></i>
+                        </div>
+                        <div class="form-group answer-form">
+                            <div class="row">
+                                <div class="col-md-1 col-lg-1">
+                                    <div class="checkbox checkbox--inline">
+                                        <input type="checkbox" id="answerCheck1">
+                                        <label class="checkbox__label" for="answerCheck1"> </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-lg-9">
+                                    <input type="text" class="form-control" placeholder="Answer Option1">
+                                    <i class="form-group__bar"></i>
+                                </div>
+                                <div class="col-md-2 col-lg-2 remove-icon">
+                                    <span class="remove">x</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1 col-lg-1">
+                                    <div class="checkbox checkbox--inline">
+                                        <input type="checkbox" id="answerCheck2">
+                                        <label class="checkbox__label" for="answerCheck2"> </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-lg-9">
+                                    <input type="text" class="form-control" placeholder="Answer Option2">
+                                    <i class="form-group__bar"></i>
+                                </div>
+                                <div class="col-md-2 col-lg-2 remove-icon">
+                                    <span class="remove">x</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1 col-lg-1">
+                                    <div class="checkbox checkbox--inline">
+                                        <input type="checkbox" id="answerCheck3">
+                                        <label class="checkbox__label" for="answerCheck3"> </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-lg-9">
+                                    <input type="text" class="form-control" placeholder="Answer Option3">
+                                    <i class="form-group__bar"></i>
+                                </div>
+                                <div class="col-md-2 col-lg-2 remove-icon">
+                                    <span class="remove">x</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1 col-lg-1">
+                                    <div class="checkbox checkbox--inline">
+                                        <input type="checkbox" id="answerCheck4">
+                                        <label class="checkbox__label" for="answerCheck4"> </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-lg-9">
+                                    <input type="text" class="form-control" placeholder="Answer Option4">
+                                    <i class="form-group__bar"></i>
+                                </div>
+                                <div class="col-md-2 col-lg-2 remove-icon">
+                                    <span class="remove">x</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" style="text-align: right;">
+                            <button type="button" class="btn btn-warning">Add This Question</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="question-card">
+                        <div class="question-action">
+                            <span>Question1</span>
+                            <div class="action">
+                                <span class="edit"><i class="zmdi zmdi-edit zmdi-hc-fw"></i></span>
+                                <span class="remove">x</span>
+                            </div>
+                        </div>
+                        <div class="question-title">
+                            <h5>What direction does the sun rise</h5>
+                        </div>
+                        <div class="question-answers">
+                            <ul>
+                                <li>North</li>
+                                <li class="correct">East</li>
+                                <li>West</li>
+                                <li>South</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="question-card">
+                        <div class="question-action">
+                            <span>Question1</span>
+                            <div class="action">
+                                <span class="edit"><i class="zmdi zmdi-edit zmdi-hc-fw"></i></span>
+                                <span class="remove">x</span>
+                            </div>
+                        </div>
+                        <div class="question-title">
+                            <h5>What direction does the sun rise</h5>
+                        </div>
+                        <div class="question-answers">
+                            <ul>
+                                <li>North</li>
+                                <li class="correct">East</li>
+                                <li>West</li>
+                                <li>South</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="question-card">
+                        <div class="question-action">
+                            <span>Question1</span>
+                            <div class="action">
+                                <span class="edit"><i class="zmdi zmdi-edit zmdi-hc-fw"></i></span>
+                                <span class="remove">x</span>
+                            </div>
+                        </div>
+                        <div class="question-title">
+                            <h5>What direction does the sun rise</h5>
+                        </div>
+                        <div class="question-answers">
+                            <ul>
+                                <li>North</li>
+                                <li class="correct">East</li>
+                                <li>West</li>
+                                <li>South</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+</div>

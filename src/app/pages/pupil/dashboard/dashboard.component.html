@@ -1,0 +1,22 @@
+<div class="content__inner">
+    <header class="content__title">
+      <h1>{{ pageTitle }}</h1>
+      <small>{{ pageSubTitle }}</small>
+    </header>
+  
+    <div class="row">
+        <div class="col-lg-3 col-md-2" *ngFor="let post of blogPosts">
+            <div class="card">
+                <img *ngIf="post.img" class="card-img-top" [src]="['./assets/demo/img/blog/'+post.img]" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">{{ post.title }}</h4>
+                    <h6 class="card-subtitle">{{ post.date }}</h6>
+                    
+                    <a [routerLink]="['/pupil/course']" [queryParams]="{ courseID: 1 }" type="button" class="btn btn-primary" btnCheckbox btnCheckboxTrue="1" btnCheckboxFalse="0" style="width: 100%">
+                        START
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

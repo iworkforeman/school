@@ -1,0 +1,19 @@
+.course-title, .course-description {
+    position: relative;
+    .edit-icon {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #2222;
+        border-radius: 50%;
+        color: #333;
+        font-size: 20px;
+    }
+}
+.course-title {
+    margin-right: 60%;
+}
+.course-description {
+    padding-right: 3rem;
+}

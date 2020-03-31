@@ -1,0 +1,71 @@
+<div class="content__inner">
+    <header class="content__title">
+      <h1>{{ pageTitle }}</h1>
+    </header>
+    <div class="row">
+        <div class="col-md-3 col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <ul class="nav flex-column">
+                        <li class="nav-item mark-as-complete"><button type="button" class="btn btn-info">Mark as Complete</button></li>
+                        <li class="nav-item" *ngFor="let member of classMembers; index as i;"><a class="nav-link">{{member}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-lg-9">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">John Smith's assignment on Learning about the Compass</h4>
+                    <div class="listview">
+                        <div class="listview__item ng-star-inserted">
+                            <div class="listview__content">
+                                <p>1. The alien mothership is in orbit here. If we can hit that bullseye, the rest of the dominoes will fall</p>
+                            </div>
+                        </div>
+                        <div class="listview__item ng-star-inserted">
+                            <div class="listview__content">
+                                <p>2. Like a house of cards. Checkmate</p>
+                            </div>
+                        </div>
+                        <div class="listview__item ng-star-inserted">
+                            <div class="listview__content">
+                                <p>3. Just once I'd like to eat dinner with a celebrity who isn't bound and gagged</p>
+                            </div>
+                        </div>
+                        <div class="listview__item ng-star-inserted">
+                            <div class="listview__content">
+                                <p>4. Now, now Perfectly symmctrical violence never solved anything</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <form>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="">Feedback</label>
+                                    <textarea class="form-control" rows="5"></textarea>
+                                    <i class="form-group__bar"></i>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <label for="">Grading</label>
+                                            <ng5-slider class="input-slider" [(value)]="sliderValue" [options]="sliderOptions"></ng5-slider>
+                                            <i class="form-group__bar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-danger">Grade Work</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

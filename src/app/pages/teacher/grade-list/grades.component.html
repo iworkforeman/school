@@ -1,0 +1,26 @@
+<div class="content__inner">
+    <header class="content__title">
+      <h1>{{ pageTitle }}</h1>
+    </header>
+  
+    <div class="card">
+      <div class="card-body">
+        <table datatable class="table table-bordered" [dtOptions]="options">
+          <thead>
+            <tr>
+              <th *ngFor="let column of columns">{{ column.title }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of rows">
+              <td>{{ row.date }}</td>
+              <td>{{ row.course }}</td>
+              <td>{{ row.due_date }}</td>
+              <td>{{ row.papers_to_mark }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
