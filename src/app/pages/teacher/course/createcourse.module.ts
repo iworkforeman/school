@@ -5,22 +5,22 @@ import {RouterModule} from "@angular/router";
 import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {ModalModule} from 'ngx-bootstrap/modal';
+import {YoutubeCardModule} from '../../../widgets/youtube-card/youtube-card.module';
+import {ImageUploadModule} from '../../../widgets/image-upload/imageupload.module';
 
 import {CreateCourseComponent} from "./createcourse.component";
-import {YoutubeCardComponent} from "./youtube-card/youtube-card.component";
-import {ImageUploadComponent} from './image/imageupload.component';
 
 const TEACHER_ROUTE = [{path: '', component: CreateCourseComponent}];
 
 @NgModule({
     declarations: [
-        CreateCourseComponent,
-        YoutubeCardComponent,
-        ImageUploadComponent,
+        CreateCourseComponent
     ],
     imports: [
         CommonModule,
         FormsModule,
+        YoutubeCardModule,
+        ImageUploadModule,
         BsDatepickerModule.forRoot(),
         BsDropdownModule.forRoot(),
         ModalModule.forRoot(),

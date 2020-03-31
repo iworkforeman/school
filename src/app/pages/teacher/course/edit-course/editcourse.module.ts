@@ -6,21 +6,22 @@ import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {ModalModule} from 'ngx-bootstrap/modal';
 
+import {YoutubeCardModule} from '../../../../widgets/youtube-card/youtube-card.module';
+import {ImageUploadModule} from '../../../../widgets/image-upload/imageupload.module';
+
 import {EditCourseComponent} from "./editcourse.component";
-import {YoutubeCardComponent} from "../youtube-card/youtube-card.component";
-import {ImageUploadComponent} from '../image/imageupload.component';
 
 const EDIT_COURSE_ROUTE = [{path: '', component: EditCourseComponent}];
 
 @NgModule({
     declarations: [
-        EditCourseComponent,
-        YoutubeCardComponent,
-        ImageUploadComponent,
+        EditCourseComponent
     ],
     imports: [
         CommonModule,
         FormsModule,
+        YoutubeCardModule,
+        ImageUploadModule,
         BsDatepickerModule.forRoot(),
         BsDropdownModule.forRoot(),
         ModalModule.forRoot(),
