@@ -52,3 +52,11 @@
         }
     }
 }
+.left-card {
+    max-height: 690px;
+    overflow-y: auto;
+}
+.right-card {
+    position: fixed;
+    width: 22%;
+}

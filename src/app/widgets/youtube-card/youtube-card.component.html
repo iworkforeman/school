@@ -1,16 +1,14 @@
-<div class="youtube-card">
-    <div class="row">
-        <div class="col-md-4 col-lg-4">
-            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+<div class="card">
+    <div class="card-body">
+        <div class="actions">
+            <a [routerLink]="" class="actions__item zmdi zmdi-trending-up"></a>
         </div>
-        <div class="col-md-8 col-lg-8">
-            <h2 class="card-title">
-                {{title}}
-            </h2>
-            <p class="card-description">
-                {{description}}
-            </p>
+        <div class="media">
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+            <div class="media-body">
+                <h5 class="mt-0">{{ title }}</h5>
+                <p class="card-text">{{ description }}</p>
+            </div>
         </div>
     </div>
-    <span class="remove-icon">×</span>
 </div>
