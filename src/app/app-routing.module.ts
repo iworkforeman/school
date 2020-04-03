@@ -51,7 +51,7 @@ const routes: Routes = [
                 loadChildren: "./pages/teacher/course/my-course/mycourse.module#MyCourseModule"
             },
             {
-                path: "grade",
+                path: "grading",
                 loadChildren: "./pages/teacher/grade/grade.module#GradeModule"
             },
             {
@@ -61,6 +61,10 @@ const routes: Routes = [
             {
                 path: "quizzes",
                 loadChildren: "./pages/teacher/quizzes/quizzes.module#QuizzesModule"
+            },
+            {
+                path: "create-quizz",
+                loadChildren: "./pages/teacher/quizzes/create-quizz/createquizz.module#CreateQuizzModule"
             }
         ]
     },
